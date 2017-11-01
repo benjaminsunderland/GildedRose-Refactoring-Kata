@@ -18,8 +18,8 @@ class GildedRose
         if item.quality < 50 #if the item quality is less than 50
           item.quality = item.quality + 1 #we increase the quality by 1
           if item.name == "Backstage passes to a TAFKAL80ETC concert"#if item is the concert ticket
-            if item.sell_in < 11#and if the item's sell in value is less than 11
-              if item.quality < 50#and if the quality is less than 50
+            if item.sell_in < 11 #and if the item's sell in value is less than 11
+              if item.quality < 50 #and if the quality is less than 50
                 item.quality = item.quality + 1#we should increase it by 1
               end
             end
@@ -48,23 +48,9 @@ class GildedRose
         else
           if item.quality < 50#if the quality is over 50
             item.quality = item.quality + 1#we add one to the quality
+            end
           end
         end
       end
     end
   end
-
-  def sulfuras
-    if item.quality > 0
-    if item.name != "Sulfuras, Hand of Ragnaros"
-      item.quality = item.quality - 1
-    end
-    if item.name != "Sulfuras, Hand of Ragnaros"
-      item.sell_in = item.sell_in - 1
-    end
-    if item.sell_in < 0
-    if item.name != "Sulfuras, Hand of Ragnaros"
-      item.quality = item.quality - 1
-    end
-  end
-end
